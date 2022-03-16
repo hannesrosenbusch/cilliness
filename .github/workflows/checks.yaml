@@ -1,0 +1,29 @@
+name: cilliness
+
+on: push
+
+jobs:
+  my_checks:
+    name: lint and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: set up python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9.6
+
+      - name: install dependencies
+        run: |
+          make install
+
+      - name: run tests
+        run: |
+          make test
+
+      - name: lint
+        run: |
+          make lint
+
+
+
