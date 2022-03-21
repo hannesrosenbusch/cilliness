@@ -1,4 +1,4 @@
-'''CI silliness'''
+'''trying out some CI silliness'''
 import torch
 
 def maximum(my_tensor):
